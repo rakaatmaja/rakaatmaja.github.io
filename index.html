@@ -14,12 +14,10 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Responsive Portfolio Website</title>
-    <link rel="icon" href="assets/img/ico.png">
+    <title>Raka</title>
 </head>
 
 <body>
-    <div class="cpr">created by Raka with love</div>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -38,24 +36,25 @@
                         </a>
                     </li>
                     <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
                         <a href="#qualification" class="nav__link">
                             <i class="uil uil-briefcase-alt nav__icon"></i> Qualification
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#certificate" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Certificate
+                      <li class="nav__item">
+                        <a href="#project" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i> Project
                         </a>
-                        <li class="nav__item">
-                            <a href="#project" class="nav__link">
-                                <i class="uil uil-brackets-curly nav__icon"></i> Project
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contactme
-                            </a>
-                        </li>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> Contact
+                        </a>
+                    </li>
                 </ul>
                 <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
@@ -78,23 +77,40 @@
 
         <!--==================== HOME ====================-->
         <section class="home section" id="home">
-            <div class="home__container  container grid">
-                <div></div>
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Raka Putra Atmaja
-                        </span>
-                        <h3 class="home__subtitle"> Software Developer</h3>
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://id.linkedin.com/in/raka-putra-atmaja-654b431b7" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt "></i>
+                        </a>
+                        <a href="https://instagram.com/imraka_a" class="home__social-icon">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871
+                    10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871
+                    10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                <image class="home__blob-img" x='12' y='-8' xlink:href="assets/img/3.png" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I am Raka</h1>
+                        <h3 class="home__subtitle">Flutter Developer</h3>
+                        <!-- <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vitae commodi quidem inventore modi repellat enim nihil quasi accusantium iste sit, eum dicta ipsa nesciunt harum incidunt alias, maiores officiis!</p> -->
+
+                    </div>
                 </div>
-                <div></div>
-                <div class="home__social">
-                    <a href="https://id.linkedin.com/in/raka-putra-atmaja-654b431b7" class="home__social-icon">
-                        <i class="uil uil-linkedin-alt "></i>
-                    </a>
-                    <a href="https://instagram.com/imraka_a" class="home__social-icon">
-                        <i class="uil uil-instagram"></i>
-                    </a>
-                </div>
-            </div>
+            </div><br><br><br>
         </section>
 
         <!--==================== ABOUT ====================-->
@@ -102,21 +118,97 @@
             <h2 class="section__title">About Me</h2>
             <span class="section__subtitle">Introduction</span>
 
-
-            <div class="about__data container">
-                <p class="about__description">I'm student currently studying in software engineering. I 'm person who can be relied on in teamwork, I also have a pretty good leader and communication personality. With the skills I have, I can help the company achieve its goals.</p>
-
-                <div onclick="view()" class="about__buttons">
-                    <a download="" href="" class="button button--flex">
-                           View CV<i class="uil uil-eye button__icon"></i>
+            <div class="about__container  ">
+                <div class="about__data">
+                    <p class="about__description">I am a student currently studying in the field of Computer
+                        Science. I am also focusing on studying mobile development, especially in Flutter.</p>
+                    <div onclick="view()" class="about__buttons">
+                        <a download="" href="" class="button button--flex">
+                            Visit CV<i class="uil uil-eye button__icon"></i>
+                            <script>
+                                function view() {
+                                    alert('Saat ini Curriculum Vitae belum tersedia.');
+                                }
+                            </script>
                         </a>
-                    <script>
-                        function view() {
-                            alert('Curriculum Vitae tidak tersedia saat ini!')
-                        }
-                    </script>
+                    </div>
                 </div>
             </div>
+            </div><br><br><br>
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My skills</span>
+
+            <div class="skills__container container grid">
+                <div>
+                    <!--==================== SKILLS 1 ====================-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Frontend</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Flutter</h3>
+                                </div>
+                                <div class="skills__bar">
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Dart</h3>
+                                </div>
+                                <div class="skills__bar">
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML</h3>
+                                </div>
+                                <div class="skills__bar">
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS</h3>
+                                </div>
+                                <div class="skills__bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== SKILLS 2 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-server-alt skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Backend</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Firebase</h3>
+                                </div>
+                                <div class="skills__bar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br>
         </section>
 
         <!--==================== QUALIFICATION ====================-->
@@ -176,7 +268,7 @@
                                 <h3 class="qualification__title">SMKS Telekomunikasi Telesandi</h3>
                                 <span class="qualification__subtitle">Indonesia - Bekasi</span>
                                 <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>2019 - Now
+                                    <i class="uil uil-calendar-alt"></i>2019 - 2022
                                 </div>
                             </div>
                             <div>
@@ -184,58 +276,28 @@
                                 <span class="qualification__line"></span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
+                          <!--==================== QUALIFICATION 2 ====================-->
+                          <div class="qualification__data">
+                            <div></div>
 
-        <!--==================== PORTFOLIO ====================-->
-        <section class="certificate section" id="certificate">
-            <h2 class="section__title">Certificate</h2>
-            <span class="section__subtitle">My certificate</span>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
 
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!--==================== PORTFOLIO 1====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/certificate/02.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Cyber Security Training</h3>
-                            <p class="portfolio__description">Completed Modul CompTIA+ and Cybersecurity Analyst (CySA+).</p>
-                            <a href="assets/img/certificate/02.jpg" class="button button--flex button--small portfolio__button">
-                                View
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--==================== PORTFOLIO 2====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/certificate/01.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Workshop Cyber Security</h3>
-                            <p class="portfolio__description">Cyber Security Professional Development Workshop Batch 2.</p>
-                            <a href="assets/img/certificate/01.jpg" class="button button--flex button--small portfolio__button">
-                                View
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
+                            <div>
+                                <div>
+                                    <h3 class="qualification__title">Universitas Pendidikan Ganesha</h3>
+                                    <span class="qualification__subtitle">Indonesia - Bali</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>2022 - Now
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+            </div>
             </div>
         </section>
 
@@ -250,7 +312,8 @@
                         <img src="assets/img/projek/vb.png" alt="" />
                     </div>
                     <h3>School Financial Administration</h3>
-                    <p>The school financial management application is made with Visual Studio 2012 and the GunaUI framework.</p>
+                    <p>The school financial management application is made with Visual Studio 2012 and the GunaUI
+                        framework.</p>
                 </div>
 
                 <div class="work__img">
@@ -258,12 +321,29 @@
                         <img src="assets/img/projek/2.png" alt="" />
                     </div>
                     <h3>To-Do List</h3>
-                    <p>An easy-to-use online schedule organizer functions to help organize your time and daily activities.</p>
+                    <p>An easy-to-use online schedule organizer functions to help organize your time and daily
+                        activities.</p>
+                </div>
+                <div class="work__img">
+                    <div class="images">
+                        <img src="assets/img/projek/sholatku.png" alt="" />
+                    </div>
+                    <h3>Alquranku</h3>
+                    <p>Provide information on prayer readings and qibla direction directives.</p>
+                </div>
+                <div class="work__img">
+                    <div class="images">
+                        <img src="assets/img/projek/bekasi.png" alt="" />
+                    </div>
+                    <h3>Bekasique</h3>
+                    <p> Provide all information about bekasi.</p>
                 </div>
             </div>
         </section>
 
-        <!--==================== CONTACT ====================-->
+        </section>
+
+        <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contact Me</h2>
             <span class="section__subtitle">My contact</span>
@@ -275,7 +355,7 @@
                         <i class="uil uil-envelope contact__icon"></i>
                         <div>
                             <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">rakapa24@gmail.com</span>
+                            <span class="contact__subtitle">rakapa23@gmail.com</span>
                         </div>
                     </div>
 
@@ -283,12 +363,13 @@
                         <i class="uil uil-map-marker contact__icon"></i>
                         <div>
                             <h3 class="contact__title">Location</h3>
-                            <span class="contact__subtitle">Indonesia - Bekasi</span>
+                            <span class="contact__subtitle">Indonesia - Bali</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -297,21 +378,8 @@
             <div class="footer__container container grid">
                 <div>
                     <h1 class="footer__title">Raka</h1>
-                    <span class="footer__subtitle">Software Developer</span>
+                    <span class="footer__subtitle">Flutter Developer</span>
                 </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#qualification" class="footer__link">Qualification</a>
-                    </li>
-                    <li>
-                        <a href="#certificate" class="footer__link">Certificate</a>
-                    </li>
-                    <li>
-                        <a href="#project" class="footer__link">Project</a>
-                    </li>
-                </ul>
-
                 <div class="footer__socials">
                     <a href="https://instagram.com/imraka_a" class="footer__social">
                         <i class="uil uil-instagram"></i>
@@ -323,7 +391,7 @@
                 </div>
             </div>
 
-            <p class="footer__copy">&#169; 2021 Raka Putra Atmaja</p>
+            <p class="footer__copy">&#169; 2021-PRESENT © Raka Atmaja❤️</p>
         </div>
     </footer>
 
@@ -334,8 +402,6 @@
 
     <!--==================== SWIPER JS ====================-->
     <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
