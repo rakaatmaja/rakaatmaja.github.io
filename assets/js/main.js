@@ -1,1 +1,176 @@
-var _0xc72d=["\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x63\x6C\x69\x63\x6B","\x73\x68\x6F\x77","\x74\x6F\x67\x67\x6C\x65","\x63\x6C\x61\x73\x73\x4C\x69\x73\x74","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x6E\x61\x76\x2D\x74\x6F\x67\x67\x6C\x65","\x6E\x61\x76\x2D\x6D\x65\x6E\x75","\x2E\x6E\x61\x76\x5F\x5F\x6C\x69\x6E\x6B","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72\x41\x6C\x6C","\x61\x63\x74\x69\x76\x65","\x72\x65\x6D\x6F\x76\x65","\x66\x6F\x72\x45\x61\x63\x68","\x61\x64\x64","\x74\x6F\x70","\x38\x30\x70\x78","\x2E\x68\x6F\x6D\x65\x5F\x5F\x74\x69\x74\x6C\x65","\x72\x65\x76\x65\x61\x6C","\x2E\x62\x75\x74\x74\x6F\x6E","\x2E\x68\x6F\x6D\x65\x5F\x5F\x69\x6D\x67","\x2E\x68\x6F\x6D\x65\x5F\x5F\x73\x6F\x63\x69\x61\x6C\x2D\x69\x63\x6F\x6E","\x2E\x61\x62\x6F\x75\x74\x5F\x5F\x69\x6D\x67","\x2E\x61\x62\x6F\x75\x74\x5F\x5F\x73\x75\x62\x74\x69\x74\x6C\x65","\x2E\x61\x62\x6F\x75\x74\x5F\x5F\x74\x65\x78\x74","\x2E\x63\x65\x72\x74\x69\x66\x69\x63\x61\x74\x65\x5F\x5F\x69\x6D\x67","\x2E\x77\x6F\x72\x6B\x5F\x5F\x69\x6D\x67","\x2E\x63\x6F\x6E\x74\x61\x63\x74\x5F\x5F\x69\x6E\x70\x75\x74"];const showMenu=(_0x7fbcx2,_0x7fbcx3)=>{const _0x7fbcx4=document[_0xc72d[0]](_0x7fbcx2),_0x7fbcx5=document[_0xc72d[0]](_0x7fbcx3);if(_0x7fbcx4&& _0x7fbcx5){_0x7fbcx4[_0xc72d[5]](_0xc72d[1],()=>{_0x7fbcx5[_0xc72d[4]][_0xc72d[3]](_0xc72d[2])})}};showMenu(_0xc72d[6],_0xc72d[7]);const navLink=document[_0xc72d[9]](_0xc72d[8]);function linkAction(){navLink[_0xc72d[12]]((_0x7fbcx8)=>{return _0x7fbcx8[_0xc72d[4]][_0xc72d[11]](_0xc72d[10])});this[_0xc72d[4]][_0xc72d[13]](_0xc72d[10]);const _0x7fbcx9=document[_0xc72d[0]](_0xc72d[7]);_0x7fbcx9[_0xc72d[4]][_0xc72d[11]](_0xc72d[2])}navLink[_0xc72d[12]]((_0x7fbcx8)=>{return _0x7fbcx8[_0xc72d[5]](_0xc72d[1],linkAction)});const sr=ScrollReveal({origin:_0xc72d[14],distance:_0xc72d[15],duration:2000,reset:true});sr[_0xc72d[17]](_0xc72d[16],{});sr[_0xc72d[17]](_0xc72d[18],{delay:200});sr[_0xc72d[17]](_0xc72d[19],{delay:400});sr[_0xc72d[17]](_0xc72d[20],{interval:200});sr[_0xc72d[17]](_0xc72d[21],{});sr[_0xc72d[17]](_0xc72d[22],{delay:400});sr[_0xc72d[17]](_0xc72d[23],{delay:400});sr[_0xc72d[17]](_0xc72d[24],{interval:200});sr[_0xc72d[17]](_0xc72d[25],{interval:200});sr[_0xc72d[17]](_0xc72d[26],{interval:200})
+/*==================== MENU SHOW Y HIDDEN ====================*/
+const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close');
+
+/*===== MENU SHOW =====*/
+/* Validate if constant exists */
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+
+        navMenu.classList.add('show-menu');
+    });
+};
+
+/*===== MENU HIDDEN =====*/
+/* Validate if constant exists */
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    });
+};
+
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction() {
+    const navMenu = document.getElementById('nav-menu')
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*==================== ACCORDION SKILLS ====================*/
+const skillsContent = document.getElementsByClassName('skills__content'),
+    skillsHeader = document.querySelectorAll('.skills__header')
+
+function toggleSkills() {
+    let itemClass = this.parentNode.className
+
+    for (i = 0; i < skillsContent.length; i++) {
+        skillsContent[i].className = 'skills__content skills__close'
+    };
+    if (itemClass === 'skills__content skills__close') {
+        this.parentNode.className = 'skills__content skills__open'
+    };
+};
+
+skillsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSkills)
+});
+/*==================== QUALIFICATION TABS ====================*/
+const tabs = document.querySelectorAll('[data-target]')
+tabContents = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('qualification__active')
+        })
+        target.classList.add('qualification__active'),
+
+            tabs.forEach(tab => {
+                tab.classList.remove('qualification__active')
+            })
+        tab.classList.add('qualification__active')
+    })
+})
+
+
+
+/*==================== PORTFOLIO SWIPER  ====================*/
+let swiper = new Swiper('.portfolio__container', {
+    cssMode: true,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+
+
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+    const nav = document.getElementById('header')
+    if (this.scrollY >= 80) nav.classList.add('scroll-header')
+    else nav.classList.remove('scroll-header')
+};
+window.addEventListener('scroll', scrollHeader);
+
+/*==================== SHOW SCROLL UP ====================*/
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up')
+    if (this.scrollY >= 560) scrollUp.classList.add('show-scroll')
+    else scrollUp.classList.remove('show-scroll')
+};
+window.addEventListener('scroll', scrollUp)
+
+/*==================== DARK LIGHT THEME ====================*/
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
+
+
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+
+
+if (selectedTheme) {
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+});
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
+
+/*SCROLL HOME*/
+sr.reveal('.home__title', {});
+sr.reveal('.home__social', { delay: 400 });
+sr.reveal('.home__social-icon', { interval: 200 });
+sr.reveal('.home__subtitle', { interval: 200 });
+
+/*SCROLL ABOUT*/
+sr.reveal('.about__subtitle', { delay: 200 });
+sr.reveal('.about__description', { delay: 200 });
+
+/*QUALIFICATION*/
+sr.reveal('.qualification__data', { interval: 200 });
+sr.reveal('.qualification__button', { interval: 400 });
+
+/*SCROLL Gallery*/
+sr.reveal('.work__img', { interval: 200 });
+
+/*SCROLL CONTACT*/
+sr.reveal('.contact__information', { interval: 200 });
